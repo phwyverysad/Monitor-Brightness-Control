@@ -1,77 +1,65 @@
 # 🖥️ Monitor Brightness Control (Noble Brightness)
 
-[![Framework](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?logo=windows)](https://microsoft.com)
-[![Language](https://img.shields.io/badge/Language-C%23-239120?logo=c-sharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-
-Lightweight, high-performance Windows System Tray brightness controller. Adjust your primary display brightness effortlessly by hovering over the tray icon and using your mouse scroll wheel.
+โปรแกรมควบคุมความสว่างหน้าจอคอมพิวเตอร์ผ่าน System Tray บน Windows ออกแบบมาให้ใช้งานง่าย รวดเร็ว และกินทรัพยากรเครื่องน้อยที่สุด
 
 ---
 
-## ✨ Features (คุณสมบัติเด่น)
+## 🌟 คุณสมบัติเด่น
 
-* 🖱️ **Scroll-to-Adjust**: Hover the system tray icon and scroll the mouse wheel to change brightness in 5% increments.
-* 🖥️ **Dual Hardware Support**:
-  * **DDC/CI** for external desktop monitors.
-  * **WMI (Windows Management Instrumentation)** fallback for laptop panels and internal displays.
-* ⚡ **Ultra Lightweight & Fast**: Optimized C# implementation with minimal CPU/RAM footprint (~3.2 MB installer package).
-* 🔒 **Safe Mouse Hooking**: The low-level mouse hook checks the physical bounds of the tray icon before acting, ensuring unrelated document/browser scrolling is never intercepted.
-* ⚙️ **Context Menu**: Right-click the tray icon to select active monitors or jump directly to specific brightness levels (0% – 100%).
-* 📦 **Standalone Installer**: Includes a lightweight Windows Installer with auto-startup options and clean Control Panel uninstallation.
-
----
-
-## 🚀 Installation & Usage (การติดตั้งและการใช้งาน)
-
-### Requirements
-* **Operating System**: Windows 10 / 11 (64-bit)
-* **Monitor**: DDC/CI enabled in the monitor's On-Screen Display (OSD) menu for external displays.
-
-### Quick Start
-1. Download `Setup_NobleBrightness.exe` from the latest release.
-2. Run the installer to install the application into `C:\Program Files\NobleBrightness`.
-3. The app will launch automatically in your System Tray (bottom right of your screen).
-4. Hover over the tray icon and scroll your mouse wheel up/down to adjust brightness.
+- 🖱️ **ปรับความสว่างด้วยลูกกลิ้งเมาส์**: เลื่อนลูกกลิ้งเมาส์ (Mouse Wheel) ขึ้น-ลง บนไอคอนบริเวณ System Tray มุมขวาล่างเพื่อปรับความสว่าง (ทีละ 5%)
+- 🖥️ **รองรับหน้าจอหลากหลายประเภท**:
+  - **DDC/CI**: สำหรับหน้าจอมอนิเตอร์แยก (External Monitors)
+  - **WMI**: รองรับหน้าจอโน้ตบุ๊ก (Laptop Displays)
+- ⚡ **น้ำหนักเบาและประหยัดทรัพยากร**: ตัวติดตั้งขนาดเพียง 3.2 MB ทำงานรวดเร็ว ไม่หน่วงเครื่อง
+- 🔒 **ระบบ Hook ปลอดภัย**: ตรวจสอบตำแหน่งเมาส์เฉพาะบนไอคอนโปรแกรม ไม่กระทบการเลื่อนหน้าเว็บหรือเอกสารอื่นๆ
+- ⚙️ **เมนูทางเลือก**: คลิกขวาที่ไอคอนเพื่อเลือกจอมอนิเตอร์ หรือเลือกระดับความสว่าง (0% - 100%) ได้ทันที
+- 📦 **ตัวติดตั้งสมบูรณ์แบบ**: มาพร้อมชุดติดตั้งที่รองรับการเปิดอัตโนมัติพร้อม Windows และการถอนติดตั้งจาก Control Panel
 
 ---
 
-## 🛠️ Building from Source (การคอมไพล์ด้วยตนเอง)
+## 🚀 การติดตั้งและการใช้งาน
 
-### Prerequisites
+### ความต้องการของระบบ
+* **ระบบปฏิบัติการ**: Windows 10 / Windows 11 (64-bit)
+* **หน้าจอมอนิเตอร์**: เปิดใช้งานฟังก์ชัน **DDC/CI** ในเมนูตั้งค่าของหน้าจอ (สำหรับมอนิเตอร์ต่อแยก)
+
+### ขั้นตอนการใช้งาน
+1. ดาวน์โหลดไฟล์ `Setup_NobleBrightness.exe`
+2. ดับเบิลคลิกเพื่อติดตั้งโปรแกรม (ติดตั้งลงใน `C:\Program Files\NobleBrightness`)
+3. ไอคอนจะปรากฏบริเวณ System Tray มุมขวาล่างของหน้าจอ
+4. เลื่อนเมาส์ไปวางเหนือไอคอน แล้วหมุนลูกกลิ้งเมาส์เพื่อปรับความสว่างตามต้องการ
+
+---
+
+## 🛠️ การคอมไพล์ซอร์สโค้ด (Build from Source)
+
+### สิ่งที่ต้องใช้
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 
-### 1. Build & Run Application
+### 1. ทดสอบรันโปรแกรม
 ```powershell
-# Restore and run
 dotnet restore .\NobleBrightness\NobleBrightness.csproj
 dotnet run --project .\NobleBrightness\NobleBrightness.csproj
 ```
 
-### 2. Publish Standalone / Lightweight Binary
+### 2. คอมไพล์เป็นไฟล์โปรแกรม (.exe)
 ```powershell
-# Framework-dependent small binary
 dotnet publish .\NobleBrightness\NobleBrightness.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
-
-# Self-contained single file (no .NET required on target machine)
-dotnet publish .\NobleBrightness\NobleBrightness.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true
 ```
 
-### 3. Build Setup Installer Package
+### 3. คอมไพล์ชุดตัวติดตั้ง (Installer Package)
 ```powershell
 dotnet publish .\NobleBrightnessInstaller\NobleBrightnessInstaller.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
 ```
 
 ---
 
-## 📐 Architecture & Technical Details
+## ⚙️ รายละเอียดทางเทคนิค
 
-### Safe Low-Level Mouse Wheel Hook
-The application registers a low-level mouse hook (`WH_MOUSE_LL`). When a scroll event occurs, it calls `Shell_NotifyIconGetRect` to query Explorer for the exact physical screen boundaries of the tray icon. If the cursor is outside the icon, the hook immediately passes the event down the hook chain without consuming it.
-
-### Smooth DDC/CI & WMI Execution
-DDC/CI hardware I/O and WMI queries run asynchronously off the UI thread. Mouse wheel scroll bursts are coalesced using an 80 ms debounce window in a background worker channel. Tooltips and context menus update instantaneously from in-memory state while physical monitor hardware commands execute smoothly in the background.
+* **Global Wheel Hook**: ใช้เทคนิค Windows Hook (`WH_MOUSE_LL`) ร่วมกับ API `Shell_NotifyIconGetRect` เพื่อตรวจสอบพิกัดเมาส์กับไอคอนบน Taskbar ป้องกันไม่ให้ส่งผลกระทบต่อการทำงานของโปรแกรมอื่น
+* **Debounce & Asynchronous Execution**: คำสั่งส่งค่าปรับความสว่างฮาร์ดแวร์ DDC/CI และ WMI ทำงานแบบ Asynchronous ร่วมกับระบบ Debounce (80ms) เพื่อให้การปรับความสว่างตอบสนองได้ลื่นไหลและไม่ค้างกระตุก
 
 ---
 
-## 📄 License
-This project is open-source under the MIT License.
+## 📄 ลิขสิทธิ์
+โปรเจกต์นี้เป็นซอฟต์แวร์โอเพ่นซอร์สภายใต้ใบอนุญาต MIT License
