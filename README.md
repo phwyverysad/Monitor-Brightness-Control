@@ -1,5 +1,6 @@
 # 🖥️ Monitor Brightness Control (Noble Brightness)
 
+[![Download](https://img.shields.io/badge/Download-Release-2ea44f?logo=github)](https://github.com/phwyverysad/Monitor-Brightness-Control/releases/tag/NobleBrightness)
 [![Framework](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?logo=windows)](https://microsoft.com)
 [![Language](https://img.shields.io/badge/Language-C%23-239120?logo=c-sharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -23,12 +24,14 @@
 
 ## 🚀 การติดตั้งและการใช้งาน
 
+[![Download Installer](https://img.shields.io/badge/Download-Setup__NobleBrightness.exe-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/phwyverysad/Monitor-Brightness-Control/releases/tag/NobleBrightness)
+
 ### ความต้องการของระบบ
 * **ระบบปฏิบัติการ**: Windows 10 / Windows 11 (64-bit)
 * **หน้าจอมอนิเตอร์**: เปิดใช้งานฟังก์ชัน **DDC/CI** ในเมนูตั้งค่าของหน้าจอ (สำหรับมอนิเตอร์ต่อแยก)
 
 ### ขั้นตอนการใช้งาน
-1. ดาวน์โหลดไฟล์ `Setup_NobleBrightness.exe`
+1. คลิกปุ่ม **[Download]** เพื่อดาวน์โหลดไฟล์ `Setup_NobleBrightness.exe`
 2. ดับเบิลคลิกเพื่อติดตั้งโปรแกรม (ติดตั้งลงใน `C:\Program Files\NobleBrightness`)
 3. ไอคอนจะปรากฏบริเวณ System Tray มุมขวาล่างของหน้าจอ
 4. เลื่อนเมาส์ไปวางเหนือไอคอน แล้วหมุนลูกกลิ้งเมาส์เพื่อปรับความสว่างตามต้องการ
