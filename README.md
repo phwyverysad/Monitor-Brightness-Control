@@ -1,4 +1,4 @@
-Monitor Brightness Control
+## Monitor Brightness Control
 
 [![Download](https://img.shields.io/badge/Download-Release-2ea44f?logo=github)](https://github.com/phwyverysad/Monitor-Brightness-Control/releases/tag/NobleBrightness)
 [![Framework](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
@@ -9,7 +9,7 @@ Monitor Brightness Control
 
 ---
 
-## 🌟 คุณสมบัติเด่น
+## คุณสมบัติเด่น
 
 **ปรับความสว่างด้วยลูกกลิ้งเมาส์**: เลื่อนลูกกลิ้งเมาส์ (Mouse Wheel) ขึ้น-ลง บนไอคอนบริเวณ System Tray มุมขวาล่างเพื่อปรับความสว่าง (ทีละ 5%)
 **รองรับหน้าจอหลากหลายประเภท**:
