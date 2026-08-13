@@ -1,5 +1,9 @@
 # 🖥️ Monitor Brightness Control (Noble Brightness)
 
+[![Framework](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?logo=windows)](https://microsoft.com)
+[![Language](https://img.shields.io/badge/Language-C%23-239120?logo=c-sharp)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
 โปรแกรมควบคุมความสว่างหน้าจอคอมพิวเตอร์ผ่าน System Tray บน Windows ออกแบบมาให้ใช้งานง่าย รวดเร็ว และกินทรัพยากรเครื่องน้อยที่สุด
 
 ---
